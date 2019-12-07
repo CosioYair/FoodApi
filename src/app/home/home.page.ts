@@ -26,6 +26,7 @@ export class HomePage implements OnInit {
     .pipe(take(1))
     .subscribe(foods => {
       this.foods = foods;
+      console.log(foods);
     }, err => {
       console.log(err);
     });
