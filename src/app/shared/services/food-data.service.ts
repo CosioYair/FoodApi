@@ -17,4 +17,8 @@ export class FoodDataService {
       generalSearchInput: term
     }).pipe(map(response => response['foods']));
   }
+
+  public getDetails(id): Observable<any> {
+    return this._http.get(`https://api.nal.usda.gov/fdc/v1/${id}?api_key=${environment.foodApiKey}`);
+  }
 }
