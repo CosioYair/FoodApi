@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { FoodDataService } from '../shared/services/food-data.service';
+import { FoodDataService } from '../../shared/services/food-data.service';
 import { take } from 'rxjs/operators';
-import { Food } from '../shared/models/food';
+import { Food } from '../../shared/models/food';
 
 @Component({
   selector: 'app-home',
@@ -26,7 +26,6 @@ export class HomePage implements OnInit {
     .pipe(take(1))
     .subscribe(foods => {
       this.foods = foods;
-      console.log(foods);
     }, err => {
       console.log(err);
     });
