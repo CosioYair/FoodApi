@@ -1,0 +1,10 @@
+<ion-list>
+  <ion-item *ngFor="let nutrient of nutrients">
+    <ion-label class="ion-text-wrap">
+      <h2>{{ nutrient.nutrient.name }}</h2>
+    </ion-label>
+    <ion-label class="ion-text-wrap">
+      <p>Amout: {{ nutrient.grams}} g.</p>
+    </ion-label>
+  </ion-item>
+</ion-list>

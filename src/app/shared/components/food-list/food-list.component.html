@@ -5,6 +5,6 @@
       <br>
       <p>Score: {{ food.score }}</p>
     </ion-label>
-    <ion-button color="primary" [routerLink]="['/']" fill="clear">Details</ion-button>
+    <ion-button color="primary" [routerLink]="['/food-details', food.fdcId]" fill="clear">Details</ion-button>
   </ion-item>
 </ion-list>

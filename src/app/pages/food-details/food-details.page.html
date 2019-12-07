@@ -1,0 +1,14 @@
+<app-header title="Food details"></app-header>
+<ion-content>
+  <div class="ion-padding">
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>{{ foodDetails.description }}</ion-card-title>
+      </ion-card-header>
+
+      <ion-card-content>
+       <app-nutrients-list [nutrients]="foodDetails.foodNutrients ? foodDetails.foodNutrients : []"></app-nutrients-list>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>

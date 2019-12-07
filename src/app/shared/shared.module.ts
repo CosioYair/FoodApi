@@ -4,13 +4,15 @@ import { IonicModule } from '@ionic/angular';
 import { HeaderComponent } from './components/header/header.component';
 import { FoodListComponent } from './components/food-list/food-list.component';
 import { RouterModule } from '@angular/router';
+import { NutrientsListComponent } from './components/nutrients-list/nutrients-list.component';
 
 
 
 @NgModule({
   declarations: [
     HeaderComponent,
-    FoodListComponent
+    FoodListComponent,
+    NutrientsListComponent
   ],
   imports: [
     CommonModule,
@@ -19,7 +21,8 @@ import { RouterModule } from '@angular/router';
   ],
   exports: [
     HeaderComponent,
-    FoodListComponent
+    FoodListComponent,
+    NutrientsListComponent
   ]
 })
 export class SharedModule { }
