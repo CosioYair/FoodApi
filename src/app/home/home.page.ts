@@ -11,22 +11,21 @@ import { Food } from '../shared/models/food';
 export class HomePage implements OnInit {
 
   public foods: Food[] = [];
+  public term: string = '';
 
   constructor(private _foodDataService: FoodDataService) {
 
   }
 
   ngOnInit() {
-    this.searchFood('meet');
+    this.searchFood();
   }
 
-  searchFood(term) {
-    this._foodDataService.search(term)
+  searchFood() {
+    this._foodDataService.search(this.term)
     .pipe(take(1))
     .subscribe(foods => {
       this.foods = foods;
-      console.log(this.foods);
-      
     }, err => {
       console.log(err);
     });

@@ -1,12 +1,13 @@
 <app-header title="Home"></app-header>
 <ion-content>
   <div class="ion-padding">
+    <ion-searchbar [(ngModel)]="term" (ionChange)="searchFood()" debounce="500" placeholder="Filter Schedules" animated></ion-searchbar>
     <ion-list>
       <ion-item *ngFor="let food of foods">
         <ion-label width-100 class="ion-text-wrap">
           <h2>{{ food.description }}</h2>
           <p>{{ food.brandOwner }}</p>
-          </ion-label>
+        </ion-label>
         <ion-button color="primary" [routerLink]="['/']" fill="clear">Details</ion-button>
       </ion-item>
     </ion-list>
